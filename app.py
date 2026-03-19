@@ -3,7 +3,10 @@ import pickle
 import numpy as np
 
 # Load model
-model = pickle.load(open("credit_model.pkl", "rb"))
+import os
+
+model_path = os.path.join(os.getcwd(), 'credit_model.pkl')
+model = pickle.load(open(model_path, 'rb'))
 
 # Page config
 st.set_page_config(page_title="Credit Risk Predictor", page_icon="💳")
